@@ -1,3 +1,4 @@
+$ErrorActionPreference= 'silentlycontinue'
 cl /c rsrc\wfc.c
 lib wfc.obj
 mkdir C:\wfc
