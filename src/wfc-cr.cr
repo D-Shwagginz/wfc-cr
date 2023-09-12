@@ -2,25 +2,25 @@
 lib WFC
   VERSION = "0.0.1"
 
-  WfcDirectionStrings = ["up", "down", "left", "right"] of LibC::Char
+  WFC_DIRECTION_STRINGS = ["up", "down", "left", "right"] of LibC::Char
 
   enum WfcDirection
-    WFC_UP    = 0
-    WFC_DOWN  = 1
-    WFC_LEFT  = 2
-    WFC_RIGHT = 3
+    WfcUp    = 0
+    WfcDown  = 1
+    WfcLeft  = 2
+    WfcRight = 3
   end
 
   Directions = [
-    WfcDirection::WFC_UP.value,
-    WfcDirection::WFC_DOWN.value,
-    WfcDirection::WFC_LEFT.value,
-    WfcDirection::WFC_RIGHT.value,
+    WfcDirection::WfcUp.value,
+    WfcDirection::WfcDown.value,
+    WfcDirection::WfcLeft.value,
+    WfcDirection::WfcRight.value,
   ] of LibC::Int
 
   enum WfcMethod
-    WFC_METHOD_OVERLAPPING = 0
-    WFC_METHOD_TILED       = 1
+    Overlapping = 0
+    Tiled       = 1
   end
 
   struct WfcImage
