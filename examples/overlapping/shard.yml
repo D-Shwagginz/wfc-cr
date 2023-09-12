@@ -1,0 +1,17 @@
+name: overlapping
+version: 0.1.0
+
+authors:
+  - D. Shwagginz <dshwagbusiness@gmail.com>
+
+targets:
+  overlapping:
+    main: src/overlapping.cr
+
+dependencies:
+  wfc-cr:
+    path: ../../
+
+crystal: 1.9.2
+
+license: MIT

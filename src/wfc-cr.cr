@@ -135,9 +135,9 @@ lib LibWFC
     image : Image*,
     tile_width : LibC::Int,
     tile_height : LibC::Int,
-    expand_input : LibC::Int,
-    xflip_tiles : LibC::Int,
-    yflip_tiles : LibC::Int,
+    expand_input : Bool,
+    xflip_tiles : Bool,
+    yflip_tiles : Bool,
     rotate_tiles : LibC::Int
   ) : WFC*
 end
