@@ -39,11 +39,25 @@ set LIB=%LIB%;C:\wfc
 
 ## Usage
 
-TODO: Write usage instructions here
+Quick example:
 
-## Development
+```crystal
+require "wfc-cr"
 
-TODO: Write development instructions here
+input_image = LibWfc.image_load("Path/To/Image.png")
+
+wfc = LibWfc.overlapping(128, 128, input_image, 3, 3, 1, 1, 1, 1)
+
+LibWfc.run(wfc, -1)
+
+output_image = LibWfc.output_image(wfc)
+
+LibWfc.image_save(output_image, "Path/To/MyNewImage.png")
+
+LibWfc.image_destroy(input_image)
+LibWfc.image_destroy(output_image)
+LibWfc.destroy(wfc)
+```
 
 ## Contributing
 
