@@ -1,12 +1,41 @@
 # wfc-cr
 
 Crystal C-Bindings for [krychu/wfc](https://github.com/krychu/wfc)
-to create random images using wave function collapse
-![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0de8741a7d26ae98689c7b3339e97dfafea9fd26)
+to create random images using [wave function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse)
 
 ## Installation
 
-TODO: Write installation instructions here
+### Linux
+
+1. Run
+```sh
+sh ./rsrc/install.sh
+```
+2. Add `wfc-cr` to your `shard.yml` dependencies like so:
+```yml
+dependencies:
+  wfc-cr:
+    github: D-Shwagginz/wfc-cr
+```
+
+### Windows
+
+1. Follow the instructions at https://github.com/neatorobito/scoop-crystal to add the crystal-preview bucket to scoop
+2. Install crystal with `scoop install crystal`
+3. Run `.\rsrc\install.ps1` in powershell
+4. Run in powershell
+```powershell
+$env:LIB="${env:LIB};C:\wfc"
+$env:PATH="${env:PATH};C:\wfc"
+```
+
+OR
+
+Run in cmd
+```cmd
+set PATH=%PATH%;C:\wfc
+set LIB=%LIB%;C:\wfc
+```
 
 ## Usage
 
