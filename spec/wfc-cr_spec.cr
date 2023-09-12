@@ -1,9 +1,23 @@
 require "./spec_helper"
 
-describe Wfc::Cr do
-  # TODO: Write tests
+describe "LibWFC" do
+  it "should work" do
+    image = LibWFC.image_create(5, 5, 1)
 
-  it "works" do
-    false.should eq(true)
+    wfc = LibWFC.overlapping(
+      128,
+      128,
+      image,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1
+    )
+
+    LibWFC.run(wfc, -1)
+
+    LibWFC.destroy(wfc)
   end
 end

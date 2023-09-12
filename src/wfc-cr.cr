@@ -1,5 +1,5 @@
 @[Link("wfc")]
-lib LibWfc
+lib LibWFC
   VERSION = "0.0.1"
 
   DIRECTION_STRINGS = ["up", "down", "left", "right"] of LibC::Char
@@ -41,7 +41,7 @@ lib LibWfc
     direction : Direction
   end
 
-  struct Wfc
+  struct WFC
     method : Method
     seed : LibC::UInt
 
@@ -70,10 +70,10 @@ lib LibWfc
     allowed_tiles : LibC::Int[4]*
   end
 
-  fun init = wfc_init(wfc : Wfc*) : Void
-  fun run = wfc_run(wfc : Wfc*, max_collapse_cnt : LibC::Int) : LibC::Int
-  fun export = wfc_export(wfc : Wfc*, filename : LibC::Char*) : LibC::Int
-  fun destroy = wfc_destroy(wfc : Wfc*) : Void
+  fun init = wfc_init(wfc : WFC*) : Void
+  fun run = wfc_run(wfc : WFC*, max_collapse_cnt : LibC::Int) : LibC::Int
+  fun export = wfc_export(wfc : WFC*, filename : LibC::Char*) : LibC::Int
+  fun destroy = wfc_destroy(wfc : WFC*) : Void
   fun print_prop = wfc__print_prop(p : Prop*, prefix : LibC::Char*) : Void
   fun print_props = wfc__print_props(p : Prop*, prop_cnt : LibC::Int, prefix : LibC::Char*) : Void
   fun image_save = wfc_img_save(image : Image*, filename : LibC::Char*) : LibC::Int
@@ -90,10 +90,10 @@ lib LibWfc
   fun nofunc_int = wfc__nofunc_int(func_name : LibC::Char*, msg : LibC::Char*, ...) : LibC::Int
   fun nofunc_pointer = wfc__nofunc_ptr(func_name : LibC::Char*, msg : LibC::Char*, ...) : Void*
   fun destroy_cells = wfc_destroy_cells(cells : LibC::Int*) : Void
-  fun cells = wfc_cells(wfc : Wfc*) : LibC::Int
-  fun output_image = wfc_output_image(wfc : Wfc*) : Image*
-  fun export = wfc_export(wfc : Wfc*, filename : LibC::Char*) : LibC::Int
-  fun export_tiles = wfc_export_tiles(wfc : Wfc*, path : LibC::Char*) : LibC::Int
+  fun cells = wfc_cells(wfc : WFC*) : LibC::Int
+  fun output_image = wfc_output_image(wfc : WFC*) : Image*
+  fun export = wfc_export(wfc : WFC*, filename : LibC::Char*) : LibC::Int
+  fun export_tiles = wfc_export_tiles(wfc : WFC*, path : LibC::Char*) : LibC::Int
   fun create_tile_image = wfc__create_tile_image(image : Image*, x : LibC::Int, y : LibC::Int, tile_width : LibC::Int, tile_height : LibC::Int) : Image*
   fun add_overlapping_images = wfc__add_overlapping_images(tiles : Tile*, image : Image*, xcnt : LibC::Int, ycnt : LibC::Int, tile_width : LibC::Int, tile_height : LibC::Int) : LibC::Int
   fun add_flipped_images = wfc__add_flipped_images(tiles : Tile*, tile_idx : LibC::Int, flip_direction : LibC::Int) : LibC::Int
@@ -107,18 +107,18 @@ lib LibWfc
   fun destroy_cells = wfc__destroy_cells(cells : Cell*, cell_cnt : LibC::Int) : Void
   fun destroy_tiles = wfc__destroy_tiles(tiles : Tile*, tile_cnt : LibC::Int) : Void
   fun destroy_allowed_tiles = wfc__destroy_allowed_tiles(allowed_tiles : LibC::Int[4]*) : Void
-  fun add_prop = wfc__add_prop(wfc : Wfc*, src_cell_idx : LibC::Int, dst_cell_idx : LibC::Int, direction : Direction) : Void
-  fun add_prop_up = wfc__add_prop_up(wfc : Wfc*, src_cell_idx : LibC::Int) : Void
-  fun add_prop_down = wfc__add_prop_down(wfc : Wfc*, src_cell_idx : LibC::Int) : Void
-  fun add_prop_left = wfc__add_prop_left(wfc : Wfc*, src_cell_idx : LibC::Int) : Void
-  fun add_prop_right = wfc__add_prop_right(wfc : Wfc*, src_cell_idx : LibC::Int) : Void
-  fun tile_enabled = wfc__tile_enabled(wfc : Wfc*, tile_idx : LibC::Int, cell_idx : LibC::Int, d : Direction) : LibC::Int
-  fun is_prop_pending = wfc__is_prop_pending(wfc : Wfc*, cell_idx : LibC::Int, d : Direction) : LibC::Int
-  fun propagate_prop = wfc__propagate_prop(wfc : Wfc*, p : Prop*) : LibC::Int
-  fun propagate = wfc__propagate(wfc : Wfc*, cell_idx : LibC::Int) : LibC::Int
-  fun collapse = wfc__collapse(wfc : Wfc*, cell_idx : LibC::Int) : LibC::Int
-  fun next_cell = wfc__next_cell(wfc : Wfc*) : LibC::Int
-  fun init_cells = wfc__init_cells(wfc : Wfc*) : Void
+  fun add_prop = wfc__add_prop(wfc : WFC*, src_cell_idx : LibC::Int, dst_cell_idx : LibC::Int, direction : Direction) : Void
+  fun add_prop_up = wfc__add_prop_up(wfc : WFC*, src_cell_idx : LibC::Int) : Void
+  fun add_prop_down = wfc__add_prop_down(wfc : WFC*, src_cell_idx : LibC::Int) : Void
+  fun add_prop_left = wfc__add_prop_left(wfc : WFC*, src_cell_idx : LibC::Int) : Void
+  fun add_prop_right = wfc__add_prop_right(wfc : WFC*, src_cell_idx : LibC::Int) : Void
+  fun tile_enabled = wfc__tile_enabled(wfc : WFC*, tile_idx : LibC::Int, cell_idx : LibC::Int, d : Direction) : LibC::Int
+  fun is_prop_pending = wfc__is_prop_pending(wfc : WFC*, cell_idx : LibC::Int, d : Direction) : LibC::Int
+  fun propagate_prop = wfc__propagate_prop(wfc : WFC*, p : Prop*) : LibC::Int
+  fun propagate = wfc__propagate(wfc : WFC*, cell_idx : LibC::Int) : LibC::Int
+  fun collapse = wfc__collapse(wfc : WFC*, cell_idx : LibC::Int) : LibC::Int
+  fun next_cell = wfc__next_cell(wfc : WFC*) : LibC::Int
+  fun init_cells = wfc__init_cells(wfc : WFC*) : Void
   fun compute_allowed_tiles = wfc__compute_allowed_tiles(allowed_tiles : LibC::Int[4]*, tiles : Tile*, tile_cnt : LibC::Int) : Void
   fun create_tiles_overlapping = wfc__create_tiles_overlapping(
     tile_width : LibC::Int,
@@ -139,5 +139,5 @@ lib LibWfc
     xflip_tiles : LibC::Int,
     yflip_tiles : LibC::Int,
     rotate_tiles : LibC::Int
-  ) : Wfc*
+  ) : WFC*
 end
