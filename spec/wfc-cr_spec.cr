@@ -10,9 +10,9 @@ describe "LibWFC" do
       image,
       3,
       3,
-      1,
-      1,
-      1,
+      true,
+      true,
+      true,
       1
     )
 
