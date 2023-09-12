@@ -1,0 +1,13 @@
+name: wfc-cr
+version: 0.1.0
+
+authors:
+  - D. Shwagginz <dshwagbusiness@gmail.com>
+
+targets:
+  wfc-cr:
+    main: src/wfc-cr.cr
+
+crystal: 1.9.2
+
+license: MIT
