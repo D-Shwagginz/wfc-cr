@@ -44,19 +44,19 @@ Quick example:
 ```crystal
 require "wfc-cr"
 
-input_image = LibWFC.image_load("Path/To/Image.png")
+input_image = WFC.image_load("Path/To/Image.png")
 
-wfc = LibWFC.overlapping(128, 128, input_image, 3, 3, 1, 1, 1, 1)
+wfc = WFC.overlapping(128, 128, input_image, 3, 3, 1, 1, 1, 1)
 
-LibWFC.run(wfc, -1)
+WFC.run(wfc, -1)
 
-output_image = LibWFC.output_image(wfc)
+output_image = WFC.output_image(wfc)
 
-LibWFC.image_save(output_image, "Path/To/MyNewImage.png")
+WFC.image_save(output_image, "Path/To/MyNewImage.png")
 
-LibWFC.image_destroy(input_image)
-LibWFC.image_destroy(output_image)
-LibWFC.destroy(wfc)
+WFC.image_destroy(input_image)
+WFC.image_destroy(output_image)
+WFC.destroy(wfc)
 ```
 
 ## Contributing
