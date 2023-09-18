@@ -1,6 +1,6 @@
 @[Link("wfc")]
-lib LibWFC
-  VERSION = "0.0.1"
+lib WFC
+  VERSION = "0.7"
 
   DIRECTION_STRINGS = ["up", "down", "left", "right"] of LibC::Char
 
