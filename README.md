@@ -1,5 +1,8 @@
 # wfc-cr
 
+[![Ubuntu - Test](https://github.com/D-Shwagginz/wfc-cr/actions/workflows/ubuntu-test.yml/badge.svg)](https://github.com/D-Shwagginz/wfc-cr/actions/workflows/ubuntu-test.yml)
+[![Windows - Test](https://github.com/D-Shwagginz/wfc-cr/actions/workflows/windows-test.yml/badge.svg)](https://github.com/D-Shwagginz/wfc-cr/actions/workflows/windows-test.yml)
+
 Crystal C-Bindings for [krychu/wfc](https://github.com/krychu/wfc)
 to create random images using [wave function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse)
 
