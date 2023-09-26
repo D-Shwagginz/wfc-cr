@@ -1,10 +1,10 @@
 require "./spec_helper"
 
-describe "LibWFC" do
+describe "WFC" do
   it "should work" do
-    image = LibWFC.image_create(5, 5, 1)
+    image = WFC.image_create(5, 5, 1)
 
-    wfc = LibWFC.overlapping(
+    wfc = WFC.overlapping(
       128,
       128,
       image,
@@ -16,8 +16,8 @@ describe "LibWFC" do
       1
     )
 
-    LibWFC.run(wfc, -1)
+    WFC.run(wfc, -1)
 
-    LibWFC.destroy(wfc)
+    WFC.destroy(wfc)
   end
 end
